@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil Fotográfico</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Font Awesome para los íconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <!-- Barra de Navegación -->
+  <header class="navbar">
+    <div class="logo">Mi Perfil</div>
+    <nav>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Buscar</a></li>
+        <li><a href="#" onclick="document.getElementById('uploadModal').style.display='block'">Publicar</a></li>
+        <li><a href="#">Notificaciones</a></li>
+        <li><a href="#">Perfil</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Modal para subir publicaciones -->
+  <div id="uploadModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="document.getElementById('uploadModal').style.display='none'">&times;</span>
+      <h2>Subir Nueva Publicación</h2>
+      <input type="file" accept="image/*">
+      <button>Subir</button>
+    </div>
+  </div>
+
+  <!-- Galería de publicaciones -->
+  <section class="gallery-section">
+    <div class="gallery">
+      <!-- Publicación 1 -->
+      <div class="photo-card">
+        <img src="ONG.jpg" alt="Foto" class="photo-image">
+        <div class="actions">
+          <button class="icon-btn like-btn" onclick="toggleLike(this)">
+            <i class="fa-regular fa-heart"></i> <!-- Corazón vacío -->
+          </button>
+          <button class="icon-btn">
+            <i class="fa-regular fa-comment"></i> <!-- Ícono de comentario -->
+          </button>
+          <button class="icon-btn">
+            <i class="fa-solid fa-paper-plane"></i> <!-- Ícono de compartir -->
+          </button>
+        </div>
+        <span class="likes-count">0 Me gusta</span>
+        <div class="comments">
+          <ul class="comment-list"></ul>
+          <div class="comment-input-container">
+            <input type="text" placeholder="Añadir un comentario..." class="comment-input">
+            <button class="comment-btn" onclick="addComment(this)">Enviar</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Publicación 2 -->
+      <div class="photo-card">
+        <img src="https://source.unsplash.com/random/300x300?sig=2" alt="Foto" class="photo-image">
+        <div class="actions">
+          <button class="icon-btn like-btn" onclick="toggleLike(this)">
+            <i class="fa-regular fa-heart"></i> <!-- Corazón vacío -->
+          </button>
+          <button class="icon-btn">
+            <i class="fa-regular fa-comment"></i> <!-- Ícono de comentario -->
+          </button>
+          <button class="icon-btn">
+            <i class="fa-solid fa-paper-plane"></i> <!-- Ícono de compartir -->
+          </button>
+        </div>
+        <span class="likes-count">0 Me gusta</span>
+        <div class="comments">
+          <ul class="comment-list"></ul>
+          <div class="comment-input-container">
+            <input type="text" placeholder="Añadir un comentario..." class="comment-input">
+            <button class="comment-btn" onclick="addComment(this)">Enviar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

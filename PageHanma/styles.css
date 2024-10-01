@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fafafa;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .navbar ul {
+    list-style-type: none;
+    display: flex;
+  }
+  
+  .navbar li {
+    margin-right: 20px;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: #000;
+  }
+  
+  .gallery-section {
+    padding: 20px;
+  }
+  
+  .photo-card {
+    background-color: #fff;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .photo-image {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 12px;
+  }
+  
+  .actions {
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+  }
+  
+  .icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .icon-btn i {
+    font-size: 24px;
+  }
+  
+  .liked i {
+    color: #ed4956; /* Rojo al estar "liked" */
+  }
+  
+  .likes-count {
+    display: block;
+    padding-left: 10px;
+    font-weight: bold;
+    margin-top: 5px;
+  }
+  
+  .comment-input-container {
+    display: flex;
+    border-top: 1px solid #ddd;
+    padding: 10px;
+  }
+  
+  .comment-input {
+    flex-grow: 1;
+    border: none;
+    padding-left: 10px;
+    font-size: 14px;
+  }
+  
+  .comment-btn {
+    background-color: #3897f0;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+  }
+  
+  .comment-list {
+    padding: 10px;
+  }
+  
+  .comment-list li {
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    width: 50%;
+    border-radius: 12px;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    cursor: pointer;
+  }
+  
+  .close:hover {
+    color: #000;
+  }
+  
